@@ -1,3 +1,12 @@
+# Run Commands
+Please run these commands on the terminal to install and run the project smoothly.
+
+# Dependencies Installation
+npm install --legacy-peer-deps --force 
+
+# For Running the project
+npm run dev
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
