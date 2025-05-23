@@ -20,9 +20,9 @@ const Footer = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const footerData = [
-    { label: "Language: English (United Kingdom)", icon: <LanguageIcon /> },
-    { label: "Location: United Kingdom", icon: <LocationOnOutlinedIcon /> },
-    { label: "Currency: GBP", icon: <PaymentsIcon /> },
+    { label: "Language: English (United States)", icon: <LanguageIcon /> },
+    { label: "Location: Bangladesh", icon: <LocationOnOutlinedIcon /> },
+    { label: "Currency: Taka", icon: <PaymentsIcon /> },
   ];
 
   return (

@@ -6,16 +6,15 @@ const defaultCountryCode = "US";
 
 export const Api = axios.create({
   method: "GET",
-  //url: "https://sky-scrapper.p.rapidapi.com/api/v1/getLocale",
   baseURL: "https://sky-scrapper.p.rapidapi.com/",
   headers: {
-    "x-rapidapi-key": "2ef926df67msh44fdee998ffca9ep15dd31jsn8406a9f8b60b",
+    "x-rapidapi-key": import.meta.env.VITE_SOME_KEY,
     "x-rapidapi-host": "sky-scrapper.p.rapidapi.com",
   },
 });
 
 export const getNearByAirports = async (position) => {
-  console.log(import.meta.env.REACT_APP_API_KEY);
+  console.log(import.meta.env.VITE_SOME_KEY);
 
   return await Api.get(
     `api/v1/flights/getNearByAirports?lat=${position[0]}&lng=${position[1]}&locale=${defaultLocale}`

@@ -37,6 +37,7 @@ const InputAutoComp = React.memo(
 
     const handleSelect = useCallback(
       (event, value) => {
+        console.log("NEW SELEC:::: ", value, type);
         onSelectFlight(value, type);
         onCloseAutocomplete();
       },

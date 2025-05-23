@@ -27,7 +27,7 @@ const customIcon = new L.Icon({
   popupAnchor: [1, -34],
 });
 
-const NearByAirports = () => {
+const NearByAirports = ({ onSelectFlight, onCloseAutocomplete }) => {
   const theme = useTheme();
   const [position, setPosition] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -59,6 +59,11 @@ const NearByAirports = () => {
     setLoading(true);
     try {
       const response = await getNearByAirports(position);
+      // console.log("POSSSS: ", response.data.data);
+      // if (response?.data?.data?.current) {
+      onSelectFlight(response?.data.data.current, "whereFrom");
+
+      // }
       setNearAirports(response?.data);
     } catch (error) {
       ErrorDialog(error);
