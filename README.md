@@ -5,6 +5,8 @@ Please run these commands on the terminal to install and run the project smoothl
 npm install --legacy-peer-deps --force 
 
 # For Running the project
+before running please make a .env file and create a api key variable like "VITE_SOME_KEY"
+then run the project
 npm run dev
 
 # React + Vite
